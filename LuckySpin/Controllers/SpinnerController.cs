@@ -11,9 +11,9 @@ namespace LuckySpin.Controllers
     {
         public IActionResult Index(int luck)
         {
-            //TODO: return this Action's View, passing it a new Spin Model object with it's Luck property set to luck
+            // return this Action's View, passing it a new Spin Model object with it's Luck property set to luck
             // (HINT: you can do this in one short line of code)
-            return View();
+            return View(new Spin());
         }
     }
 }

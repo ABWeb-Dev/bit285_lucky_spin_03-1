@@ -15,9 +15,10 @@ namespace LuckySpin
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            //TODO: enable the full MVC service
-            //services.AddMvc();
-            //TODO: (bonus) Register the TextTransformService class
+            // enable the full MVC service
+            services.AddMvc();
+            //(bonus) Register the TextTransformService class
+            //services.AddScoped<Models.TextTransformService>();
             
             
         }
@@ -35,8 +36,8 @@ namespace LuckySpin
                 );
             });
 
-            //TODO: Enable requests for static files, like CSS and images
-            //app.UseStaticFiles();
+            // Enable requests for static files, like CSS and images
+            app.UseStaticFiles();
         }
     }
 }

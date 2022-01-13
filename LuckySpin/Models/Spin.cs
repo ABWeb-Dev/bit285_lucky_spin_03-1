@@ -8,9 +8,10 @@ namespace LuckySpin.Models
         private int a,b,c,luck; //instance variables
 
         //TODO: Create public getter and setter for Luck, referencing the instance variable
+       
         public int Luck
         {
-            get { return luck; }
+            get { return luck = new Random().Next(0, 9) ; }
             set { }
         }
 
@@ -19,14 +20,14 @@ namespace LuckySpin.Models
             get
             {
 
-                return a;
+                return a = new Random().Next(0,9);
             }
         }
         public int B {
             get
             {
 
-                return b;
+                return b = new Random().Next(0, 9);
             }
         }
         public int C
@@ -34,7 +35,7 @@ namespace LuckySpin.Models
             get
             {
 
-                return c;
+                return c = new Random().Next(0, 9);
             }
         }
 
@@ -43,7 +44,7 @@ namespace LuckySpin.Models
         {
             get
             {
-                return  "block";
+                return (a == luck || b == luck || c == luck) ? "block" : "none";
             }
         }
     }
